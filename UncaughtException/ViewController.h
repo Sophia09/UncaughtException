@@ -10,4 +10,8 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *triggerButton;
+
+- (IBAction)throwFakeException:(id)sender;
+
 @end

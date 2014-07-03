@@ -26,4 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)throwFakeException:(id)sender
+{
+    NSException *uncaughtExcetion = [[NSException alloc] initWithName:@"Fake Exception"
+                                                               reason:@"DEV UNHAPPY"
+                                                             userInfo:[NSDictionary dictionaryWithObject:@"Extra info" forKey:@"Key"]];
+    [uncaughtExcetion raise];
+}
 @end
