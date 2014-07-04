@@ -98,7 +98,8 @@ void myUncaughtExceptionHandler(NSException *exception)
         MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
         mailComposer.mailComposeDelegate = self;
         [mailComposer setSubject:@"Error Report"];
-        [mailComposer setToRecipients:[NSArray arrayWithObject:@"your email address"]];
+#warning please change to your own email
+        [mailComposer setToRecipients:[NSArray arrayWithObject:@"xxx@gmail.com"]];
         
         // Attach log file
         NSData *data = [NSData dataWithContentsOfFile:stderrFile];
